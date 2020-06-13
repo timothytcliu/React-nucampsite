@@ -35,14 +35,12 @@ class Contact extends Component {
         email: false,
       },
     };
-
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleSubmit(values) {
+  handleSubmit = values => {
     console.log('Current state is: ' + JSON.stringify(values));
     alert('Current state is: ' + JSON.stringify(values));
-  }
+  };
 
   render() {
     return (
