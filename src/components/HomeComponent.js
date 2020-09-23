@@ -4,6 +4,13 @@ import { Loading } from './LoadingComponent';
 import { baseUrl } from '../shared/baseUrl';
 import { FadeTransform } from 'react-animation-components';
 
+/**
+ *
+ * Renders card from props from Home component.
+ * Picture, Title, Description
+ * or, Loading component
+ * or, Error message
+ */
 function RenderCard({ item, isLoading, errMess }) {
   if (isLoading) {
     return <Loading />;
@@ -27,6 +34,11 @@ function RenderCard({ item, isLoading, errMess }) {
   );
 }
 
+/**
+ *
+ * Homepage displays three Card components,
+ * from props data: campsites, promotions, partners
+ */
 function Home(props) {
   return (
     <div className="container">

@@ -27,14 +27,29 @@ class Header extends Component {
     };
   }
 
+  /**
+   * function toggles boolean state of small viewport navbar.
+   * true: expands out navbar options under hamburger icon
+   * false: navbar options hidden; only hamburger icon displayed
+   *
+   */
   toggleNav = () => {
     this.setState({ isNavOpen: !this.state.isNavOpen });
   };
 
+  /**
+   * function to set Modal boolean state between false and true
+   */
   toggleModal = () => {
     this.setState({ isModalOpen: !this.state.isModalOpen });
   };
 
+  /**
+   *
+   * @param {form submission data} event
+   * displays as string on browser alert
+   * toggles form modal to false
+   */
   handleLogin = event => {
     alert(
       `Username: ${this.username.value} Password: ${this.password.value} Remember: ${this.remember.checked}`
@@ -46,6 +61,7 @@ class Header extends Component {
   render() {
     return (
       <>
+        {/* Header banner, website name, and slogan */}
         <Jumbotron fluid>
           <div className="container">
             <div className="row">
@@ -56,8 +72,11 @@ class Header extends Component {
             </div>
           </div>
         </Jumbotron>
+        {/* navbar. 
+            sticks to top of viewport on scrolldown*/}
         <Navbar dark sticky="top" expand="md">
           <div className="container">
+            {/* navbar icon on far left */}
             <NavbarBrand className="mr-auto" href="/">
               <img
                 src="/assets/images/logo.png"
@@ -66,7 +85,12 @@ class Header extends Component {
                 alt="NuCamp Logo"
               />
             </NavbarBrand>
+            {/* navbar small viewport hamburger icon.
+                displays only on xs viewport.
+                onClick calls toggleNav function */}
             <NavbarToggler onClick={this.toggleNav} />
+            {/* Col/apse wrapper provides navbar to automatically collapse on xs viewport.
+                Depends on isOpen boolean state from isNavOpen*/}
             <Collapse isOpen={this.state.isNavOpen} navbar>
               <Nav navbar>
                 <NavItem>
@@ -91,6 +115,7 @@ class Header extends Component {
                 </NavItem>
               </Nav>
               <span className="navbar-text ml-auto">
+                {/* Calls toggleModal function */}
                 <Button outline onClick={this.toggleModal}>
                   <i className="fa fa-sign-in fa-lg" /> Login
                 </Button>
@@ -99,9 +124,13 @@ class Header extends Component {
           </div>
         </Navbar>
 
+        {/* Modal for login form.
+            idOpen default state is false. 
+            toggle assigned to toggleModal function*/}
         <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
           <ModalHeader toggle={this.toggleModal}>Login</ModalHeader>
           <ModalBody>
+            {/* onSubmit triggered by Button of type "submit", calls handleLogin function */}
             <Form onSubmit={this.handleLogin}>
               <FormGroup>
                 <Label htmlFor="username">Username</Label>

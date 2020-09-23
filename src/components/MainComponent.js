@@ -19,6 +19,10 @@ import {
 } from '../redux/ActionCreators';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
+/**
+ *
+ * Allows redux state to be accessible from props
+ */
 const mapStateToProps = state => {
   return {
     campsites: state.campsites,
@@ -28,6 +32,9 @@ const mapStateToProps = state => {
   };
 };
 
+/**
+ * Allows redux dispatch functions to be accessible from props
+ */
 const mapDispatchToProps = {
   postComment: (campsiteId, rating, author, text) =>
     postComment(campsiteId, rating, author, text),
@@ -56,7 +63,14 @@ const mapDispatchToProps = {
     ),
 };
 
+/**
+ * Main component
+ */
+
 class Main extends Component {
+  /**
+   * Fetches data on first mount of Main
+   */
   componentDidMount() {
     this.props.fetchCampsites();
     this.props.fetchComments();
@@ -64,6 +78,13 @@ class Main extends Component {
     this.props.fetchPartners();
   }
 
+  /**
+   * Renders Home component.
+   * Passes props from redux:
+   * Filtered for data with Featured property
+   * Loading and Err for each: campsites, partners, promotions
+   * Passed with Route "/home"
+   */
   render() {
     const HomePage = () => {
       return (
@@ -91,6 +112,12 @@ class Main extends Component {
       );
     };
 
+    /**
+     *
+     * @param {*} match
+     * Assigns current Campsite data to be displayed to the same ID as selected by user.
+     * Passed with route "/directory/:campsiteId"
+     */
     const CampsiteWithId = ({ match }) => {
       return (
         <CampsiteInfo
@@ -110,15 +137,23 @@ class Main extends Component {
       );
     };
 
+    /**
+     * Default layout of components on mount
+     * Header and Footer components remain fixed (does not route)
+     */
     return (
       <div>
         <Header />
         <TransitionGroup>
+          {/* Slight pop-in animation wrapper */}
           <CSSTransition
             key={this.props.location.key}
             classNames="page"
             timeout={300}
           >
+            {/**
+             *Redux Router
+             */}
             <Switch>
               <Route path="/home" component={HomePage} />
               <Route
@@ -142,6 +177,7 @@ class Main extends Component {
                   />
                 )}
               />
+              {/* Reroutes path "/" to "/home" */}
               <Redirect to="/home" />
             </Switch>
           </CSSTransition>
