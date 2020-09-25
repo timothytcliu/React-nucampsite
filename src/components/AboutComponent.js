@@ -12,6 +12,11 @@ import { Loading } from './LoadingComponent';
 import { Fade, Stagger } from 'react-animation-components';
 import { baseUrl } from '../shared/baseUrl';
 
+/**
+ *
+ * Main display component for About page.
+ * Props is passed to PartnerList component
+ */
 function About(props) {
   return (
     <div className="container">
@@ -88,6 +93,12 @@ function About(props) {
   );
 }
 
+/**
+ *
+ * @param {partner {} from redux store via props} partner
+ * called by PartnerList.
+ * Displays from each partner object in a row its image on the left and Title with description on the right
+ */
 const RenderPartner = ({ partner }) => {
   if (partner) {
     return (
@@ -108,7 +119,15 @@ const RenderPartner = ({ partner }) => {
   return <div />;
 };
 
+/**
+ *
+ * @param {partners={props.partners}} props
+ * called by About component.
+ * Returns media list from partners objects.
+ * or Loading or Error message
+ */
 const PartnerList = props => {
+  // variable partners is a map of each partner object returned from RenderPartner component
   const partners = props.partners.partners.map(partner => {
     return (
       <Fade key={partner.id}>
@@ -118,16 +137,19 @@ const PartnerList = props => {
       </Fade>
     );
   });
+  // displays if true.
   if (props.partners.isLoading) {
     return <Loading />;
   }
+  // displays if errMess is not null
   if (props.partners.errMess) {
     return (
       <div className="col">
-        <h4>{props.partners.errMess}</h4>);
+        <h4>{props.partners.errMess}</h4>;
       </div>
     );
   }
+  // variable partners is returned in a media list, if previous 2 if statements don't return.
   return (
     <div className="col mt-4">
       <Media list>

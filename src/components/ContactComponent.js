@@ -10,6 +10,7 @@ import {
 import { Link } from 'react-router-dom';
 import { Control, Form, Errors } from 'react-redux-form';
 
+// Form validation validator parameters
 const required = val => val && val.length;
 const maxLength = len => val => !val || val.length <= len;
 const minLength = len => val => val && val.length >= len;
@@ -37,6 +38,11 @@ class Contact extends Component {
     };
   }
 
+  /**
+   * On submission of form, values passed to handleSubmit function,
+   * passing values onto postFeedback action creator.
+   * Calls resetFeedbackFrom dispatch function pass to props from MainComponent.js
+   */
   handleSubmit = values => {
     this.props.postFeedback(
       values.firstName,
@@ -52,6 +58,7 @@ class Contact extends Component {
 
   render() {
     return (
+      // Contact Us section
       <div className="container">
         <div className="row">
           <div className="col">
@@ -92,6 +99,9 @@ class Contact extends Component {
           </div>
         </div>
 
+        {/* Feedback form. 
+            Uses form control from react-redux-form
+            on submit calls handleSubmit function*/}
         <div className="row row-content">
           <div className="col-12">
             <h2>Send us your Feedback</h2>

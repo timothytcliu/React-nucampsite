@@ -70,6 +70,7 @@ const mapDispatchToProps = {
 class Main extends Component {
   /**
    * Fetches data on first mount of Main
+   * Redux dispatch functions
    */
   componentDidMount() {
     this.props.fetchCampsites();
@@ -114,7 +115,7 @@ class Main extends Component {
 
     /**
      *
-     * @param {*} match
+     * @param {campsite ID} match
      * Assigns current Campsite data to be displayed to the same ID as selected by user.
      * Passed with route "/directory/:campsiteId"
      */

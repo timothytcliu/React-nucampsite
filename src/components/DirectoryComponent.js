@@ -11,6 +11,13 @@ import { Link } from 'react-router-dom';
 import { Loading } from './LoadingComponent';
 import { baseUrl } from '../shared/baseUrl';
 
+/**
+ *
+ * @param {campsite {} from redux} campsite
+ * Returns card with image and name from campsite object.
+ * Called within a map callback function in Directory component, variable directory.
+ * Clicking on a particular campsite's card links to `/directory/${campsite.id}`
+ */
 function RenderDirectoryItems({ campsite }) {
   return (
     <Card>
@@ -27,7 +34,14 @@ function RenderDirectoryItems({ campsite }) {
     </Card>
   );
 }
-
+/**
+ *
+ * @param {campsite {} from redux} props
+ * grabs campsites data objects. Map takes each campsite object and passes data to RenderDirectoryItems.
+ * RenderDirectoryItems renders 4 unique cards.
+ * Loading component returned if isLoading = true
+ * Error displayed if errMess = !null
+ */
 function Directory(props) {
   const directory = props.campsites.campsites.map(campsite => {
     return (
