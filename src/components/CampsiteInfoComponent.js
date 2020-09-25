@@ -18,6 +18,12 @@ import { Loading } from './LoadingComponent';
 import { baseUrl } from '../shared/baseUrl';
 import { FadeTransform, Fade, Stagger } from 'react-animation-components';
 
+/**
+ *
+ * @param {campsite {}} campsite
+ * Depending on which campsite object is passed through:
+ * Returns card with image and description of the campsite object parameter
+ */
 function RenderCampsite({ campsite }) {
   return (
     <div className="col-md-5 m-1">
@@ -38,6 +44,10 @@ function RenderCampsite({ campsite }) {
   );
 }
 
+/**
+ *
+ * Returns list of comments, author, and date that is fetched based on current campsiteId
+ */
 function RenderComments({ comments, postComment, campsiteId }) {
   if (comments) {
     return (
@@ -70,10 +80,15 @@ function RenderComments({ comments, postComment, campsiteId }) {
   return <div />;
 }
 
+// Validators parameters for CommentForm
 const required = val => val && val.length;
 const maxLength = len => val => !val || val.length <= len;
 const minLength = len => val => val && val.length >= len;
 
+/**
+ * comment form wrapped in a modal, with validation.
+ * sends form data back to db.json.
+ */
 class CommentForm extends React.Component {
   constructor(props) {
     super(props);
@@ -82,10 +97,17 @@ class CommentForm extends React.Component {
     };
   }
 
+  // function toggles modal state. Boolean
   toggleModal = () => {
     this.setState({ isModalOpen: !this.state.isModalOpen });
   };
 
+  /**
+   * called by LocalForm component
+   * @param {strings from form in modal} values
+   * calls toggleModal function
+   * calls postComment dispatch method. Passes in campsiteId, rating author text from form.
+   */
   handleSubmit = values => {
     this.toggleModal();
     this.props.postComment(
