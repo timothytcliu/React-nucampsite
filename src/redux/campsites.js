@@ -1,5 +1,9 @@
 import * as ActionTypes from './ActionTypes';
 
+/**
+ * Reducer method for campsites actions
+ */
+
 export const Campsites = (
   state = {
     isLoading: true,

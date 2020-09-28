@@ -1,5 +1,8 @@
 import * as ActionTypes from './ActionTypes';
 
+/**
+ * Reducer method for comments actions
+ */
 export const Comments = (state = { errMess: null, comments: [] }, action) => {
   switch (action.type) {
     case ActionTypes.ADD_COMMENTS:

@@ -1,5 +1,8 @@
 import * as ActionTypes from './ActionTypes';
 
+/**
+ * Reducer method for partners actions
+ */
 export const Partners = (
   state = { isLoading: true, errMess: null, partners: [] },
   action

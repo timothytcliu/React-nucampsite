@@ -1,6 +1,11 @@
 import * as ActionTypes from './ActionTypes';
 import { baseUrl } from '../shared/baseUrl';
 
+/**
+ * Redux Action creators
+ */
+
+// campsites
 export const fetchCampsites = () => dispatch => {
   dispatch(campsitesLoading());
 
@@ -41,6 +46,7 @@ export const addCampsites = campsites => ({
   payload: campsites,
 });
 
+// comments
 export const fetchComments = () => dispatch => {
   return fetch(baseUrl + 'comments')
     .then(
@@ -120,6 +126,7 @@ export const postComment = (campsiteId, rating, author, text) => dispatch => {
     });
 };
 
+// promotions
 export const fetchPromotions = () => dispatch => {
   dispatch(promotionsLoading());
   return fetch(baseUrl + 'promotions')
@@ -159,6 +166,7 @@ export const addPromotions = promotions => ({
   payload: promotions,
 });
 
+// partners
 export const partnersLoading = () => ({
   type: ActionTypes.PARTNERS_LOADING,
 });
@@ -198,6 +206,7 @@ export const fetchPartners = () => dispatch => {
     .catch(error => dispatch(partnersFailed(error.message)));
 };
 
+// feedback
 export const postFeedback = (
   firstName,
   lastName,

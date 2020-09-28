@@ -1,3 +1,7 @@
+/**
+ * initial state for form used by configureStore.js
+ */
+
 export const InitialFeedback = {
   firstName: '',
   lastName: '',
