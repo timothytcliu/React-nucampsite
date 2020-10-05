@@ -10,7 +10,7 @@ import {
 import { Link } from 'react-router-dom';
 import { Loading } from './LoadingComponent';
 import { Fade, Stagger } from 'react-animation-components';
-import { baseUrl } from '../shared/baseUrl';
+// import { baseUrl } from '../shared/baseUrl';
 
 /**
  *
@@ -103,12 +103,7 @@ const RenderPartner = ({ partner }) => {
   if (partner) {
     return (
       <>
-        <Media
-          object
-          src={baseUrl + partner.image}
-          alt={partner.name}
-          width="150"
-        />
+        <Media object src={partner.image} alt={partner.name} width="150" />
         <Media body className="ml-5 mb-4">
           <Media heading>{partner.name}</Media>
           {partner.description}

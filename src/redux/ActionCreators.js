@@ -1,5 +1,9 @@
 import * as ActionTypes from './ActionTypes';
-import { baseUrl } from '../shared/baseUrl';
+// import { baseUrl } from '../shared/baseUrl';
+import { CAMPSITES } from '../shared/campsites';
+import { COMMENTS } from '../shared/comments';
+import { PROMOTIONS } from '../shared/promotions';
+import { PARTNERS } from '../shared/partners';
 
 /**
  * Redux Action creators
@@ -9,7 +13,11 @@ import { baseUrl } from '../shared/baseUrl';
 export const fetchCampsites = () => dispatch => {
   dispatch(campsitesLoading());
 
-  return fetch(baseUrl + 'campsites')
+  setTimeout(() => {
+    dispatch(addCampsites(CAMPSITES));
+  }, 2000);
+
+  /* return fetch(baseUrl + 'campsites')
     .then(
       response => {
         if (response.ok) {
@@ -29,7 +37,7 @@ export const fetchCampsites = () => dispatch => {
     )
     .then(response => response.json())
     .then(campsites => dispatch(addCampsites(campsites)))
-    .catch(error => dispatch(campsitesFailed(error.message)));
+    .catch(error => dispatch(campsitesFailed(error.message))); */
 };
 
 export const campsitesLoading = () => ({
@@ -48,7 +56,11 @@ export const addCampsites = campsites => ({
 
 // comments
 export const fetchComments = () => dispatch => {
-  return fetch(baseUrl + 'comments')
+  setTimeout(() => {
+    dispatch(addComments(COMMENTS));
+  }, 2000);
+
+  /* return fetch(baseUrl + 'comments')
     .then(
       response => {
         if (response.ok) {
@@ -68,7 +80,7 @@ export const fetchComments = () => dispatch => {
     )
     .then(response => response.json())
     .then(comments => dispatch(addComments(comments)))
-    .catch(error => dispatch(commentsFailed(error.message)));
+    .catch(error => dispatch(commentsFailed(error.message))); */
 };
 
 export const commentsFailed = errMess => ({
@@ -95,7 +107,13 @@ export const postComment = (campsiteId, rating, author, text) => dispatch => {
   };
   newComment.date = new Date().toISOString();
 
-  return fetch(baseUrl + 'comments', {
+  alert(
+    `Thank you for your comment, ${newComment.author}:
+Rating: ${newComment.rating}/5
+Comment: "${newComment.text}"`
+  );
+
+  /* return fetch(baseUrl + 'comments', {
     method: 'POST',
     body: JSON.stringify(newComment),
     headers: {
@@ -123,13 +141,18 @@ export const postComment = (campsiteId, rating, author, text) => dispatch => {
     .catch(error => {
       console.log('post comment', error.message);
       alert('Your comment could not be posted\nError: ' + error.message);
-    });
+    }); */
 };
 
 // promotions
 export const fetchPromotions = () => dispatch => {
   dispatch(promotionsLoading());
-  return fetch(baseUrl + 'promotions')
+
+  setTimeout(() => {
+    dispatch(addPromotions(PROMOTIONS));
+  }, 2000);
+
+  /* return fetch(baseUrl + 'promotions')
     .then(
       response => {
         if (response.ok) {
@@ -149,7 +172,7 @@ export const fetchPromotions = () => dispatch => {
     )
     .then(response => response.json())
     .then(promotions => dispatch(addPromotions(promotions)))
-    .catch(error => dispatch(promotionsFailed(error.message)));
+    .catch(error => dispatch(promotionsFailed(error.message))); */
 };
 
 export const promotionsLoading = () => ({
@@ -183,7 +206,12 @@ export const addPartners = partners => ({
 
 export const fetchPartners = () => dispatch => {
   dispatch(partnersLoading());
-  return fetch(baseUrl + 'partners')
+
+  setTimeout(() => {
+    dispatch(addPartners(PARTNERS));
+  }, 2000);
+
+  /* return fetch(baseUrl + 'partners')
     .then(
       response => {
         if (response.ok) {
@@ -203,7 +231,7 @@ export const fetchPartners = () => dispatch => {
     )
     .then(response => response.json())
     .then(partners => dispatch(addPartners(partners)))
-    .catch(error => dispatch(partnersFailed(error.message)));
+    .catch(error => dispatch(partnersFailed(error.message))); */
 };
 
 // feedback
@@ -227,7 +255,10 @@ export const postFeedback = (
   };
   newFeedback.date = new Date().toISOString();
 
-  return (
+  alert(`Thank you for your feedback, ${newFeedback.firstName}:
+Feedback: "${newFeedback.feedback}"`);
+
+  /* return (
     fetch(baseUrl + 'feedback', {
       method: 'POST',
       body: JSON.stringify(newFeedback),
@@ -258,5 +289,5 @@ export const postFeedback = (
         console.log('post feedback', error.message);
         alert('Your feedback could not be posted\nError: ' + error.message);
       })
-  );
+  ); */
 };
