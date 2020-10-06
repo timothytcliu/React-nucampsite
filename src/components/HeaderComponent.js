@@ -79,7 +79,7 @@ class Header extends Component {
             {/* navbar icon on far left */}
             <NavbarBrand className="mr-auto" href="/">
               <img
-                src="images/logo.png"
+                src="../images/logo.png"
                 height="30"
                 width="30"
                 alt="NuCamp Logo"
