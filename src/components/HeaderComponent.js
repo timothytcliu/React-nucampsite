@@ -17,6 +17,7 @@ import {
   Label,
 } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
+import logo from '../images/logo.png';
 
 class Header extends Component {
   constructor(props) {
@@ -78,12 +79,7 @@ class Header extends Component {
           <div className="container">
             {/* navbar icon on far left */}
             <NavbarBrand className="mr-auto" href="/">
-              <img
-                src="../images/logo.png"
-                height="30"
-                width="30"
-                alt="NuCamp Logo"
-              />
+              <img src={logo} height="30" width="30" alt="NuCamp Logo" />
             </NavbarBrand>
             {/* navbar small viewport hamburger icon.
                 displays only on xs viewport.
