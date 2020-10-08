@@ -1,8 +1,19 @@
+/**
+ * images imported as objects to work around broken paths from the pre-deployment build.
+ * Pre-deployment to github pages, the app used relative paths in the object properties to grab the images from the images folder.
+ * Image paths no longer worked (though correctly written) after npm run build.
+ */
+
+import reactLake from '../images/react-lake.jpg';
+import chromeRiver from '../images/chrome-river.jpg';
+import breadcrumbTrail from '../images/breadcrumb-trail.jpg';
+import reduxWoods from '../images/redux-woods.jpg';
+
 export const CAMPSITES = [
   {
     id: 0,
     name: 'React Lake Campground',
-    image: '../images/react-lake.jpg',
+    image: reactLake,
     elevation: 1233,
     featured: false,
     description:
@@ -11,7 +22,7 @@ export const CAMPSITES = [
   {
     id: 1,
     name: 'Chrome River Campground ',
-    image: '../images/chrome-river.jpg',
+    image: chromeRiver,
     elevation: 877,
     featured: false,
     description:
@@ -20,7 +31,7 @@ export const CAMPSITES = [
   {
     id: 2,
     name: 'Breadcrumb Trail Campground',
-    image: '../images/breadcrumb-trail.jpg',
+    image: breadcrumbTrail,
     elevation: 2901,
     featured: false,
     description:
@@ -29,7 +40,7 @@ export const CAMPSITES = [
   {
     id: 3,
     name: 'Redux Woods Campground',
-    image: '../images/redux-woods.jpg',
+    image: reduxWoods,
     elevation: 42,
     featured: true,
     description:
