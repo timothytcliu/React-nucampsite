@@ -1,31 +1,43 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "85de496029435bf7c7976ff1ad2195df",
+    "revision": "4f91dc1e170dd91b377c20d2ab8be026",
     "url": "/React-nucampsite/index.html"
   },
   {
-    "revision": "d96e6172d34e364a1a30",
+    "revision": "3aa0eb34bed66b32b106",
     "url": "/React-nucampsite/static/css/2.9ac253dc.chunk.css"
   },
   {
-    "revision": "6a56fc887420d547df0c",
+    "revision": "07772cf7cad9fda1f3a6",
     "url": "/React-nucampsite/static/css/main.615c288e.chunk.css"
   },
   {
-    "revision": "d96e6172d34e364a1a30",
-    "url": "/React-nucampsite/static/js/2.9040900e.chunk.js"
+    "revision": "3aa0eb34bed66b32b106",
+    "url": "/React-nucampsite/static/js/2.2a841173.chunk.js"
   },
   {
     "revision": "3a5359d431b8190dc2f36e4703f39768",
-    "url": "/React-nucampsite/static/js/2.9040900e.chunk.js.LICENSE.txt"
+    "url": "/React-nucampsite/static/js/2.2a841173.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6a56fc887420d547df0c",
-    "url": "/React-nucampsite/static/js/main.b43721c0.chunk.js"
+    "revision": "07772cf7cad9fda1f3a6",
+    "url": "/React-nucampsite/static/js/main.09a7f36d.chunk.js"
   },
   {
     "revision": "47260c07d0dbdd324d08",
     "url": "/React-nucampsite/static/js/runtime-main.3d8d6a78.js"
+  },
+  {
+    "revision": "19ec10cc5c07b817b252b66f46de69ad",
+    "url": "/React-nucampsite/static/media/bootstrap-logo.19ec10cc.png"
+  },
+  {
+    "revision": "c82e71755faadaf094847cd52ca2a214",
+    "url": "/React-nucampsite/static/media/breadcrumb-trail.c82e7175.jpg"
+  },
+  {
+    "revision": "02d9f6bb627b10945c99e7e30d712b56",
+    "url": "/React-nucampsite/static/media/chrome-river.02d9f6bb.jpg"
   },
   {
     "revision": "674f50d287a8c48dc19ba404d20fe713",
@@ -54,6 +66,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "fe012fb7b22e5776c4a2e91889068974",
     "url": "/React-nucampsite/static/media/lobster-latin-400.fe012fb7.woff2"
+  },
+  {
+    "revision": "c2ca159de64a3b503bf013d046475c1a",
+    "url": "/React-nucampsite/static/media/mongo-logo.c2ca159d.png"
+  },
+  {
+    "revision": "8fc764e514e6332314e5d27af88d76f5",
+    "url": "/React-nucampsite/static/media/node-logo.8fc764e5.png"
   },
   {
     "revision": "24f7b0944e9e03a905f9d7701573b2cd",
@@ -134,5 +154,13 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "c62c3eea77cf3fca51494e8c924adf4d",
     "url": "/React-nucampsite/static/media/open-sans-latin-800italic.c62c3eea.woff2"
+  },
+  {
+    "revision": "1ef44feca0191641453e54ec8228a406",
+    "url": "/React-nucampsite/static/media/react-lake.1ef44fec.jpg"
+  },
+  {
+    "revision": "dfcc8ddc4c107ac20bba08865c502ff7",
+    "url": "/React-nucampsite/static/media/redux-woods.dfcc8ddc.jpg"
   }
 ]);

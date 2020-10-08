@@ -1,27 +1,34 @@
 {
   "files": {
     "main.css": "/React-nucampsite/static/css/main.615c288e.chunk.css",
-    "main.js": "/React-nucampsite/static/js/main.b43721c0.chunk.js",
-    "main.js.map": "/React-nucampsite/static/js/main.b43721c0.chunk.js.map",
+    "main.js": "/React-nucampsite/static/js/main.09a7f36d.chunk.js",
+    "main.js.map": "/React-nucampsite/static/js/main.09a7f36d.chunk.js.map",
     "runtime-main.js": "/React-nucampsite/static/js/runtime-main.3d8d6a78.js",
     "runtime-main.js.map": "/React-nucampsite/static/js/runtime-main.3d8d6a78.js.map",
     "static/css/2.9ac253dc.chunk.css": "/React-nucampsite/static/css/2.9ac253dc.chunk.css",
-    "static/js/2.9040900e.chunk.js": "/React-nucampsite/static/js/2.9040900e.chunk.js",
-    "static/js/2.9040900e.chunk.js.map": "/React-nucampsite/static/js/2.9040900e.chunk.js.map",
+    "static/js/2.2a841173.chunk.js": "/React-nucampsite/static/js/2.2a841173.chunk.js",
+    "static/js/2.2a841173.chunk.js.map": "/React-nucampsite/static/js/2.2a841173.chunk.js.map",
     "index.html": "/React-nucampsite/index.html",
-    "precache-manifest.e7e511b160488b263888e3c06cebb3df.js": "/React-nucampsite/precache-manifest.e7e511b160488b263888e3c06cebb3df.js",
+    "precache-manifest.819d556752acf5aa232b9eebe804eda4.js": "/React-nucampsite/precache-manifest.819d556752acf5aa232b9eebe804eda4.js",
     "service-worker.js": "/React-nucampsite/service-worker.js",
     "static/css/2.9ac253dc.chunk.css.map": "/React-nucampsite/static/css/2.9ac253dc.chunk.css.map",
     "static/css/main.615c288e.chunk.css.map": "/React-nucampsite/static/css/main.615c288e.chunk.css.map",
-    "static/js/2.9040900e.chunk.js.LICENSE.txt": "/React-nucampsite/static/js/2.9040900e.chunk.js.LICENSE.txt",
+    "static/js/2.2a841173.chunk.js.LICENSE.txt": "/React-nucampsite/static/js/2.2a841173.chunk.js.LICENSE.txt",
+    "static/media/bootstrap-logo.png": "/React-nucampsite/static/media/bootstrap-logo.19ec10cc.png",
+    "static/media/breadcrumb-trail.jpg": "/React-nucampsite/static/media/breadcrumb-trail.c82e7175.jpg",
+    "static/media/chrome-river.jpg": "/React-nucampsite/static/media/chrome-river.02d9f6bb.jpg",
     "static/media/font-awesome.css": "/React-nucampsite/static/media/fontawesome-webfont.fee66e71.woff",
-    "static/media/index.css": "/React-nucampsite/static/media/open-sans-latin-800italic.c62c3eea.woff2"
+    "static/media/index.css": "/React-nucampsite/static/media/open-sans-latin-800italic.c62c3eea.woff2",
+    "static/media/mongo-logo.png": "/React-nucampsite/static/media/mongo-logo.c2ca159d.png",
+    "static/media/node-logo.png": "/React-nucampsite/static/media/node-logo.8fc764e5.png",
+    "static/media/react-lake.jpg": "/React-nucampsite/static/media/react-lake.1ef44fec.jpg",
+    "static/media/redux-woods.jpg": "/React-nucampsite/static/media/redux-woods.dfcc8ddc.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.3d8d6a78.js",
     "static/css/2.9ac253dc.chunk.css",
-    "static/js/2.9040900e.chunk.js",
+    "static/js/2.2a841173.chunk.js",
     "static/css/main.615c288e.chunk.css",
-    "static/js/main.b43721c0.chunk.js"
+    "static/js/main.09a7f36d.chunk.js"
   ]
 }
