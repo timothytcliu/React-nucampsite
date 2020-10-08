@@ -1,7 +1,7 @@
 /**
  * images imported as objects to work around broken paths from the pre-deployment build.
  * Pre-deployment to github pages, the app used relative paths in the object properties to grab the images from the images folder.
- * Image paths no longer worked (though correctly written) after npm run build.
+ * Image paths no longer worked (though correctly written) after npm run deploy.
  */
 
 import reactLake from '../images/react-lake.jpg';
