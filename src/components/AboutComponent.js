@@ -10,7 +10,6 @@ import {
 import { Link } from 'react-router-dom';
 import { Loading } from './LoadingComponent';
 import { Fade, Stagger } from 'react-animation-components';
-// import { baseUrl } from '../shared/baseUrl';
 
 /**
  *

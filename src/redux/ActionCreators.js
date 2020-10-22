@@ -16,28 +16,6 @@ export const fetchCampsites = () => dispatch => {
   setTimeout(() => {
     dispatch(addCampsites(CAMPSITES));
   }, 2000);
-
-  /* return fetch(baseUrl + 'campsites')
-    .then(
-      response => {
-        if (response.ok) {
-          return response;
-        } else {
-          const error = new Error(
-            `Error ${response.status}: ${response.statusText}`
-          );
-          error.response = response;
-          throw error;
-        }
-      },
-      error => {
-        const errMess = new Error(error.message);
-        throw errMess;
-      }
-    )
-    .then(response => response.json())
-    .then(campsites => dispatch(addCampsites(campsites)))
-    .catch(error => dispatch(campsitesFailed(error.message))); */
 };
 
 export const campsitesLoading = () => ({
@@ -59,28 +37,6 @@ export const fetchComments = () => dispatch => {
   setTimeout(() => {
     dispatch(addComments(COMMENTS));
   }, 2000);
-
-  /* return fetch(baseUrl + 'comments')
-    .then(
-      response => {
-        if (response.ok) {
-          return response;
-        } else {
-          const error = new Error(
-            `Error ${response.status}: ${response.statusText}`
-          );
-          error.response = response;
-          throw error;
-        }
-      },
-      error => {
-        const errMess = new Error(error.message);
-        throw errMess;
-      }
-    )
-    .then(response => response.json())
-    .then(comments => dispatch(addComments(comments)))
-    .catch(error => dispatch(commentsFailed(error.message))); */
 };
 
 export const commentsFailed = errMess => ({
@@ -112,36 +68,6 @@ export const postComment = (campsiteId, rating, author, text) => dispatch => {
 Rating: ${newComment.rating}/5
 Comment: "${newComment.text}"`
   );
-
-  /* return fetch(baseUrl + 'comments', {
-    method: 'POST',
-    body: JSON.stringify(newComment),
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  })
-    .then(
-      response => {
-        if (response.ok) {
-          return response;
-        } else {
-          const error = new Error(
-            `Error ${response.status}: ${response.statusText}`
-          );
-          error.response = response;
-          throw error;
-        }
-      },
-      error => {
-        throw error;
-      }
-    )
-    .then(response => response.json())
-    .then(response => dispatch(addComment(response)))
-    .catch(error => {
-      console.log('post comment', error.message);
-      alert('Your comment could not be posted\nError: ' + error.message);
-    }); */
 };
 
 // promotions
@@ -151,28 +77,6 @@ export const fetchPromotions = () => dispatch => {
   setTimeout(() => {
     dispatch(addPromotions(PROMOTIONS));
   }, 2000);
-
-  /* return fetch(baseUrl + 'promotions')
-    .then(
-      response => {
-        if (response.ok) {
-          return response;
-        } else {
-          const error = new Error(
-            `Error ${response.status}: ${response.statusText}`
-          );
-          error.response = response;
-          throw error;
-        }
-      },
-      error => {
-        const errMess = new Error(error.message);
-        throw errMess;
-      }
-    )
-    .then(response => response.json())
-    .then(promotions => dispatch(addPromotions(promotions)))
-    .catch(error => dispatch(promotionsFailed(error.message))); */
 };
 
 export const promotionsLoading = () => ({
@@ -210,28 +114,6 @@ export const fetchPartners = () => dispatch => {
   setTimeout(() => {
     dispatch(addPartners(PARTNERS));
   }, 2000);
-
-  /* return fetch(baseUrl + 'partners')
-    .then(
-      response => {
-        if (response.ok) {
-          return response;
-        } else {
-          const error = new Error(
-            `Error ${response.status}: ${response.statusText}`
-          );
-          error.response = response;
-          throw error;
-        }
-      },
-      error => {
-        const errMess = new Error(error.message);
-        throw errMess;
-      }
-    )
-    .then(response => response.json())
-    .then(partners => dispatch(addPartners(partners)))
-    .catch(error => dispatch(partnersFailed(error.message))); */
 };
 
 // feedback
@@ -257,37 +139,4 @@ export const postFeedback = (
 
   alert(`Thank you for your feedback, ${newFeedback.firstName}:
 Feedback: "${newFeedback.feedback}"`);
-
-  /* return (
-    fetch(baseUrl + 'feedback', {
-      method: 'POST',
-      body: JSON.stringify(newFeedback),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    })
-      .then(
-        response => {
-          if (response.ok) {
-            return response;
-          } else {
-            const error = new Error(
-              `Error ${response.status}: ${response.statusText}`
-            );
-            error.response = response;
-            throw error;
-          }
-        },
-        error => {
-          throw error;
-        }
-      )
-      .then(response => response.json())
-      // .then(response => dispatch(addFeedback(response)))
-      .then(() => alert('Thank you for your feedback', newFeedback))
-      .catch(error => {
-        console.log('post feedback', error.message);
-        alert('Your feedback could not be posted\nError: ' + error.message);
-      })
-  ); */
 };
