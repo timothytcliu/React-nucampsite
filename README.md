@@ -1,5 +1,8 @@
 # React-Nucamp-project
 
+### Link to live website:
+[Link Here](https://timothytcliu.github.io/React-nucampsite/)
+
 Not a production app.
 Classroom exercise assignment in conjunction with Nucamp full stack bootcamp to learn fundamentals of ReactJS, Redux .
 
